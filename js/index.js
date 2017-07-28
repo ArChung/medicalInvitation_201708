@@ -63,7 +63,7 @@ function initBtn() {
         click: function() {
             var element = ChungTool.getAtagElement();
             element.href = 'http://www.thsrc.com.tw/tw/TimeTable/SearchResult';
-            element.attr('target','_blank');
+            $(element).attr('target','_blank');
             element.click();
         }
     });
