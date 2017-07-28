@@ -1,0 +1,189 @@
+
+html,body 
+	width: 100%
+	height: 100%
+
+
+=fullPage 
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+.bigContainer 
+	+fullPage
+	overflow: hidden
+	.bg 
+		+fullPage 
+		background-size: 100% 100%
+		+bgi('bg1.png')
+	.container
+		+fullPage
+		.page:not(.notCenter)
+			+fullPage
+			+divGoVerticalCenter_forMom
+			display: none
+			.wrap
+				+divGoVerticalCenter_forKid
+				position: relative
+
+		@for $i from 1 through 9 
+			&.channel_#{$i}	
+				.p#{$i}
+					display: block
+					.wrap 
+						position: relative
+						@for $j from 1 through 10 
+							.t#{$j}
+								+bg('p#{$i}_#{$j}.png') 
+				.p#{$i}:not(.notCenter)
+					.wrap 
+						@for $j from 1 through 10 
+							.t#{$j}
+								position: absolute
+								top: 0
+								left: 0
+						*:first-child
+							position: relative	 
+		// need edited: last channel
+		&.channel_6
+			.arr 
+				display: none   
+.arr
+	+bg('arr.png')
+	position: absolute
+	bottom: 20px
+	left: 50%
+	margin-left: -30px
+
+.calendarPop
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 20
+	+divGoVerticalCenter_forMom
+	.bg 
+		width: 100%
+		position: absolute
+		height: 100%
+		left: 0
+		top: 0
+		background-color: rgba(black,0.7)
+	.wrap
+		width: 550px
+		padding: 50px
+		background-color: white
+		+border-radius(10px)
+		position: relative
+		+divGoVerticalCenter_forKid
+		.btn
+			+border-radius(10px)
+			margin: 40px auto 0
+			height: 120px
+			line-height: 120px
+			color: white
+			cursor: pointer
+			display: block
+		.blueBtn
+			background-color: #3b79c6
+		.greenBtn
+			background-color: #2baf4a	
+		.clozBtn
+			position: absolute
+			top: -60px
+			right: 0
+			+bg('cloz.png')
+// costom rule
+.container
+	+dTime
+	.bg 
+		+bgi('bg4.png')
+	&.channel_1
+		.bg 
+			+bgi('bg1.png')
+	&.channel_2
+		.bg 
+			+bgi('bg2.png')
+	&.channel_3
+		.bg 
+			+bgi('bg3.png')
+.container
+	.p3
+		.wrap
+			left: -15px
+	.p4
+		.wrap
+			left: -34px
+	.p5
+		.wrap
+			left: -10px
+	.p6 
+		.t1
+			position: relative
+			left: 50%
+			margin-left: -322px / 2
+		.btnBox
+			position: relative
+			// +clearfix
+			width: 290px
+			left: 50%
+			margin-left: -290px / 2 
+			margin-top: 100px 
+
+			>* 
+				display: inline-block
+				vertical-align: text-top
+				margin-bottom: 50px
+				cursor: pointer
+				&:nth-child(2n + 1)
+					margin-right: 80px
+.loading
+	+fullPage 
+	z-index: 20
+	background-size: 100% 100%
+	+bgi('bg1.png')
+	+divGoVerticalCenter_forMom
+	.wTxt 
+		+divGoVerticalCenter_forKid
+		
+.p5 
+	.calendarBtn
+		position: absolute
+		width: 210px
+		height: 60px
+		// border: 1px solid #000
+		top: 0px
+		left: 90px
+	.lineBtn
+		position: absolute
+		width: 70px
+		height: 60px
+		left: 320px
+		top: 0
+		// border: 1px solid #000
+
+
+.p6 
+	.homeBtn
+		position: absolute	
+		display: block	
+		width: 70px	
+		height: 60px	
+		top: 0	
+		left: 370px	
+		// border: 1px solid #000
+
+	.linkBtn
+		position: absolute	
+		display: block	 
+		width: 70px	
+		height: 60px	
+		top: 0	
+		left: 450px	
+		// border: 1px solid #000 
+
+
+// .updown 
+	// z-index: 5
