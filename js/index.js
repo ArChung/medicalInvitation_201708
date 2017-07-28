@@ -22,10 +22,16 @@ $(document).ready(function() {
 })
 
 
-function initSwipeEvent(){
-    console.log(123)
-    $('.bigContainer').on('swipedown',function(){alert("swipedown..");} );
-    $('.bigContainer').on('swipeup',function(){alert("swipeup..");} );
+function initSwipeEvent() {
+    // console.log(123)
+    $(".bigContainer").swipe({
+        //Generic swipe handler for all directions
+        swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
+            alert(123);
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold: 0
+    });
 }
 
 function initBtn() {
