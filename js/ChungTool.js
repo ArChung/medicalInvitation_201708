@@ -270,9 +270,9 @@ var simpleHide = simpleHide || {};
     function openGoogleApp(s) {
         var element = getAtagElement();
         if (isIOS()) {
-            // element.href = 'comgooglemaps://?q=' + encodeURIComponent(s);
+            element.href = 'comgooglemaps://?q=' + encodeURIComponent(s);
         } else {
-            element.href = '//maps.google.com/?q=' + encodeURIComponent(s);
+            element.href = 'https://maps.google.com/?q=' + encodeURIComponent(s);
         }
         element.click();
 
