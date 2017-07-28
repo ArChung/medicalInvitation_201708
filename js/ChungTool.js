@@ -275,7 +275,6 @@ var simpleHide = simpleHide || {};
             element.href = 'https://maps.google.com/?q=' + encodeURIComponent(s);
         }
         element.click();
-
     }
 
 

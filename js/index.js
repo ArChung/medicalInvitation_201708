@@ -55,7 +55,15 @@ function initBtn() {
 
     $(".mapBtn").swipe({
         click: function() {
-            var element = ChungTool.openGoogleApp('高雄長庚紀念醫院');
+            ChungTool.openGoogleApp('高雄長庚紀念醫院');
+        }
+    });
+
+    $('tripBtn').swipe({
+        click: function() {
+            var element = getAtagElement();
+            element.href = 'http://www.thsrc.com.tw/tw/TimeTable/SearchResult';
+            element.click();
         }
     });
 }
