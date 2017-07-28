@@ -137,7 +137,7 @@ function playAni(page) {
         .set(page.find('.roleAni'), { rotationY: 60 })
         .set(page.find('.rotateAni'), { rotationZ: 60 })
         .set(page.find('.roleRAni'), { rotationY: 60, transformOrigin: '120% 0%' })
-        .staggerTo(page.find('.wrap > *'), .6, { rotationZ: 0, autoAlpha: 1, marginTop: 0, marginLeft: 0, ease: Back.easeOut }, .1)
+        .staggerTo(page.find('.wrap > *'), 1, { rotationZ: 0, autoAlpha: 1, marginTop: 0, marginLeft: 0, ease: Back.easeOut }, .1)
 
 
 }
