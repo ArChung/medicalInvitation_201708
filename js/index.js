@@ -59,6 +59,12 @@ function initBtn() {
         }
     });
 
+    $(".arr").swipe({
+        click: function() {
+             goNext();
+        }
+    });
+
     $('.tripBtn').swipe({
         click: function() {
             var element = ChungTool.getAtagElement();
