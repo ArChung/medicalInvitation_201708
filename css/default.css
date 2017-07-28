@@ -4159,7 +4159,7 @@ html, body {
   left: 0;
   z-index: 20;
   background-size: 100% 100%;
-  background-image: url("../images/bg1.png");
+  background-image: url("../images/bg4.png");
   text-align: center;
 }
 .loading:before {
@@ -4168,7 +4168,7 @@ html, body {
   vertical-align: middle;
   height: 100%;
 }
-.loading .wTxt {
+.loading .txt {
   display: inline-block;
   vertical-align: middle;
   max-width: 99%;

@@ -9,27 +9,34 @@ $(document).ready(function() {
 
 
 
-    // initLoading();
-    initPop();
+    initLoading();
+
     // initLine();
 
     // TweenMax.to($('.updown'), .3, { transform: "translateY(-20px)", yoyo: true, repeat: -1, ease: Power1.easeInOut });
     // TweenMax.to($('.arr'), .6, { transform: "translateY(-20px)", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
+    initPop();
     initBtn();
     initSwipeEvent();
+    initArr();
 
 })
 
+
+function initArr() {
+    TweenMax.to($('.arr'), .6, { transform: "translateY(-20px)", yoyo: true, repeat: -1, ease: Power1.easeInOut });
+
+}
 
 function initSwipeEvent() {
     // console.log(123)
     $(".bigContainer").swipe({
         //Generic swipe handler for all directions
         swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
-           goNext();
+            goNext();
         },
-        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+        swipeDown: function(event, direction, distance, duration, fingerCount, fingerData) {
             goPrev();
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe
@@ -38,36 +45,41 @@ function initSwipeEvent() {
 }
 
 function initBtn() {
-    $('.homeBtn').click(function() {
-        ChungTool.removeClassWithFilter(mom, 'channel_');
-        mom.addClass('channel_1');
-        playAni($('.p1'));
-    })
+    $(".homeBtn").swipe({
+        click: function() {
+            ChungTool.removeClassWithFilter(mom, 'channel_');
+            mom.addClass('channel_1');
+            playAni($('.p1'));
+        }
+    });
+
+    $(".mapBtn").swipe({
+        click: function() {
+            var element = ChungTool.openGoogleApp('22.6495656','120.3526765');
+        }
+    });
 }
 
 
 function initPop() {
-     $(".calendarBtn").swipe({
+    $(".calendarBtn").swipe({
         click: function() {
-           simpleShow($('.calendarPop'));
+            simpleShow($('.calendarPop'));
         }
     });
 
 
     $(".calendarPop .bg").swipe({
         click: function() {
-           simpleHide($('.calendarPop'));
+            simpleHide($('.calendarPop'));
         }
     });
 
     $(".calendarPop .clozBtn").swipe({
         click: function() {
-           simpleHide($('.calendarPop'));
+            simpleHide($('.calendarPop'));
         }
     });
-
-    
-
 }
 
 function initLine() {
@@ -84,7 +96,6 @@ function initLoading() {
     $('body').waitForImages({
         finished: function() {
             $('.loading').addClass('hide');
-            ChungTool.addSwipeUpDownEvent(mom, goPrev, goNext);
             playAni($('.p1'));
 
         },
@@ -107,10 +118,11 @@ function playAni(page) {
         .set(page.find('.lAni'), { marginLeft: -60 })
         .set(page.find('.rAni'), { marginLeft: 60 })
         .set(page.find('.tAni'), { marginTop: -60 })
-        .set(page.find('.bAni'), { marginTop: 60 })
+        .set(page.find('.bAni'), { marginTop: 100 })
         .set(page.find('.roleAni'), { rotationY: 60 })
+        .set(page.find('.rotateAni'), { rotationZ: 60 })
         .set(page.find('.roleRAni'), { rotationY: 60, transformOrigin: '120% 0%' })
-        .staggerTo(page.find('.wrap > *'), 1, { autoAlpha: 1, marginTop: 0, marginLeft: 0, ease: Back.easeOut }, .1)
+        .staggerTo(page.find('.wrap > *'), .6, { rotationZ: 0, autoAlpha: 1, marginTop: 0, marginLeft: 0, ease: Back.easeOut }, .1)
 
 
 }

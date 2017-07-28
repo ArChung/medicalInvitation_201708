@@ -267,6 +267,14 @@ var simpleHide = simpleHide || {};
         
     }
 
+    function openGoogleApp(x,y) {
+        var element = getAtagElement();
+        element.href = 'comgooglemaps://?center='+x+','+y ;
+        element.click();
+        
+    }
+
+
     function pageScrollAni(top) {
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
@@ -453,6 +461,8 @@ var simpleHide = simpleHide || {};
         $("body").trigger("touchend");
     }
 
+
+
     ChungTool.checkIdle = checkIdle;
     ChungTool.scrollReachTop = scrollReachTop;
     ChungTool.scrollReachEnd = scrollReachEnd;
@@ -494,6 +504,7 @@ var simpleHide = simpleHide || {};
     ChungTool.isOnline = isOnline;
     ChungTool.isNull = isNull;
     ChungTool.isIOS = isIOS;
+    ChungTool.openGoogleApp = openGoogleApp;
     simpleShow = c_simpleShow;
     simpleHide = c_simpleHide;
 
