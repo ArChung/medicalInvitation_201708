@@ -10,13 +10,13 @@ $(document).ready(function() {
 
 
     // initLoading();
-    // initPop();
+    initPop();
     // initLine();
 
     // TweenMax.to($('.updown'), .3, { transform: "translateY(-20px)", yoyo: true, repeat: -1, ease: Power1.easeInOut });
     // TweenMax.to($('.arr'), .6, { transform: "translateY(-20px)", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
-    // initBtn();
+    initBtn();
     initSwipeEvent();
 
 })
@@ -27,7 +27,10 @@ function initSwipeEvent() {
     $(".bigContainer").swipe({
         //Generic swipe handler for all directions
         swipeUp: function(event, direction, distance, duration, fingerCount, fingerData) {
-            alert(123);
+           goNext();
+        },
+        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+            goPrev();
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe
         threshold: 0
@@ -39,24 +42,31 @@ function initBtn() {
         ChungTool.removeClassWithFilter(mom, 'channel_');
         mom.addClass('channel_1');
         playAni($('.p1'));
-
     })
 }
 
 
 function initPop() {
+     $(".calendarBtn").swipe({
+        click: function() {
+           simpleShow($('.calendarPop'));
+        }
+    });
 
-    $('.calendarBtn').click(function() {
-        simpleShow($('.calendarPop'));
-    })
 
-    $('.calendarPop .bg').click(function() {
-        simpleHide($('.calendarPop'))
-    })
+    $(".calendarPop .bg").swipe({
+        click: function() {
+           simpleHide($('.calendarPop'));
+        }
+    });
 
-    $('.calendarPop .clozBtn').click(function() {
-        simpleHide($('.calendarPop'));
-    })
+    $(".calendarPop .clozBtn").swipe({
+        click: function() {
+           simpleHide($('.calendarPop'));
+        }
+    });
+
+    
 
 }
 
@@ -100,7 +110,7 @@ function playAni(page) {
         .set(page.find('.bAni'), { marginTop: 60 })
         .set(page.find('.roleAni'), { rotationY: 60 })
         .set(page.find('.roleRAni'), { rotationY: 60, transformOrigin: '120% 0%' })
-        .staggerTo(page.find('.wrap > *'), 1, { autoAlpha: 1, marginTop: 0, marginLeft: 0, rotationY: 0, ease: Back.easeOut }, .1)
+        .staggerTo(page.find('.wrap > *'), 1, { autoAlpha: 1, marginTop: 0, marginLeft: 0, ease: Back.easeOut }, .1)
 
 
 }

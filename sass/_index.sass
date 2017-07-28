@@ -2,7 +2,7 @@
 html,body 
 	width: 100%
 	height: 100%
-
+	overflow: hidden
 
 =fullPage 
 	width: 100%
@@ -19,7 +19,7 @@ html,body
 		+bgi('bg1.png')
 	.container
 		+fullPage
-		.page:not(.notCenter)
+		.page:not(.notAutoLayout)
 			+fullPage
 			+divGoVerticalCenter_forMom
 			display: none
@@ -36,7 +36,7 @@ html,body
 						@for $j from 1 through 10 
 							.t#{$j}
 								+bg('p#{$i}_#{$j}.png') 
-				.p#{$i}:not(.notCenter)
+				.p#{$i}:not(.notAutoLayout)
 					.wrap 
 						@for $j from 1 through 10 
 							.t#{$j}
@@ -123,15 +123,14 @@ html,body
 		.t1
 			position: relative
 			left: 50%
-			margin-left: -322px / 2
+			+transform(translateX(-50%))
 		.btnBox
 			position: relative
 			// +clearfix
 			width: 290px
 			left: 50%
-			margin-left: -290px / 2 
-			margin-top: 100px 
-
+			top: 100px
+			+transform(translateX(-50%))
 			>* 
 				display: inline-block
 				vertical-align: text-top
@@ -147,43 +146,4 @@ html,body
 	+divGoVerticalCenter_forMom
 	.wTxt 
 		+divGoVerticalCenter_forKid
-		
-.p5 
-	.calendarBtn
-		position: absolute
-		width: 210px
-		height: 60px
-		// border: 1px solid #000
-		top: 0px
-		left: 90px
-	.lineBtn
-		position: absolute
-		width: 70px
-		height: 60px
-		left: 320px
-		top: 0
-		// border: 1px solid #000
 
-
-.p6 
-	.homeBtn
-		position: absolute	
-		display: block	
-		width: 70px	
-		height: 60px	
-		top: 0	
-		left: 370px	
-		// border: 1px solid #000
-
-	.linkBtn
-		position: absolute	
-		display: block	 
-		width: 70px	
-		height: 60px	
-		top: 0	
-		left: 450px	
-		// border: 1px solid #000 
-
-
-// .updown 
-	// z-index: 5
