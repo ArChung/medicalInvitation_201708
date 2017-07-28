@@ -61,7 +61,7 @@ function initBtn() {
 
     $('.tripBtn').swipe({
         click: function() {
-            var element = getAtagElement();
+            var element = ChungTool.getAtagElement();
             element.href = 'http://www.thsrc.com.tw/tw/TimeTable/SearchResult';
             element.attr('target','_blank');
             element.click();
