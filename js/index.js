@@ -59,10 +59,11 @@ function initBtn() {
         }
     });
 
-    $('tripBtn').swipe({
+    $('.tripBtn').swipe({
         click: function() {
             var element = getAtagElement();
             element.href = 'http://www.thsrc.com.tw/tw/TimeTable/SearchResult';
+            element.attr('target','_blank');
             element.click();
         }
     });
