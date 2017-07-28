@@ -267,9 +267,9 @@ var simpleHide = simpleHide || {};
         
     }
 
-    function openGoogleApp(x,y) {
+    function openGoogleApp(s) {
         var element = getAtagElement();
-        element.href = 'comgooglemaps://?center='+x+','+y ;
+        element.href = 'comgooglemaps://?q='+encodeURIComponent(s);
         element.click();
         
     }

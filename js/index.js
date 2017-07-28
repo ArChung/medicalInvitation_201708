@@ -55,7 +55,7 @@ function initBtn() {
 
     $(".mapBtn").swipe({
         click: function() {
-            var element = ChungTool.openGoogleApp('22.6495656','120.3526765');
+            var element = ChungTool.openGoogleApp('高雄長庚紀念醫院');
         }
     });
 }
