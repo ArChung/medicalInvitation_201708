@@ -62,17 +62,17 @@ var simpleHide = simpleHide || {};
             during = 0.3;
         }
         el.each(function() {
-                var t = $(this);
-                var tl = new TimelineMax();
-                TweenMax.killTweensOf(t);
-                tl.to(t, during, {
-                        autoAlpha: 0
-                    })
-                    .call(function() {
-                        t.addClass('hide');
-                    });
-            })
-            // console.log(123)
+            var t = $(this);
+            var tl = new TimelineMax();
+            TweenMax.killTweensOf(t);
+            tl.to(t, during, {
+                    autoAlpha: 0
+                })
+                .call(function() {
+                    t.addClass('hide');
+                });
+        })
+        // console.log(123)
     }
 
     function isNull(val) {
@@ -259,19 +259,23 @@ var simpleHide = simpleHide || {};
 
     function shareToLine(s) {
         var element = getAtagElement();
-        
-        
+
+
         element.href = 'http://line.naver.jp/R/msg/text/?' + encodeURIComponent(s);
-        
+
         element.click();
-        
+
     }
 
     function openGoogleApp(s) {
         var element = getAtagElement();
-        element.href = 'comgooglemaps://?q='+encodeURIComponent(s);
+        if (isIOS()) {
+            // element.href = 'comgooglemaps://?q=' + encodeURIComponent(s);
+        } else {
+            element.href = '//maps.google.com/?q=' + encodeURIComponent(s);
+        }
         element.click();
-        
+
     }
 
 
