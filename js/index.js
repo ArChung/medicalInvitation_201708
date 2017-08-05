@@ -110,6 +110,7 @@ function initLoading() {
 
     $('body').waitForImages({
         finished: function() {
+            $('.bigContainer').removeClass('hide');
             $('.loading').addClass('hide');
             playAni($('.p1'));
 
