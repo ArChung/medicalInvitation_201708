@@ -33,9 +33,19 @@ html,body
 					display: block
 					.wrap 
 						position: relative
-						@for $j from 1 through 10 
-							.t#{$j}
-								+bg('p#{$i}_#{$j}.png') 
+						@for $j from 1 through 10
+							@if $i == 5
+								.t#{$j}
+									+bg('p7_#{$j}.png') 
+							@else if $i == 6
+								.t#{$j}
+									+bg('p5_#{$j}.png') 
+							@else  if $i == 7
+								.t#{$j}
+									+bg('p6_#{$j}.png') 
+							@else
+								.t#{$j}
+									+bg('p#{$i}_#{$j}.png') 
 				.p#{$i}:not(.notAutoLayout)
 					.wrap 
 						@for $j from 1 through 10 
@@ -45,8 +55,9 @@ html,body
 								left: 0
 						*:first-child
 							position: relative	 
+
 		// need edited: last channel
-		&.channel_6
+		&.channel_7
 			.arr 
 				display: none   
 .arr
@@ -119,7 +130,7 @@ html,body
 	.p5
 		.wrap
 			left: -10px
-	.p6 
+	.p7
 		.t1
 			position: relative
 			left: 50%

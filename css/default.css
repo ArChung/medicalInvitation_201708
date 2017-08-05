@@ -3560,34 +3560,34 @@ html, body {
   position: relative;
 }
 .bigContainer .container.channel_5 .p5 .wrap .t1 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_1.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_1.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t2 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_2.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_2.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t3 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_3.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_3.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t4 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_4.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_4.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t5 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_5.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_5.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t6 {
-  width: 623px;
-  height: 699px;
-  background-image: url("../images/p5_6.png");
+  width: 640px;
+  height: 717px;
+  background-image: url("../images/p7_6.png");
 }
 .bigContainer .container.channel_5 .p5 .wrap .t7 {
   display: none;
@@ -3661,32 +3661,34 @@ html, body {
   position: relative;
 }
 .bigContainer .container.channel_6 .p6 .wrap .t1 {
-  width: 332px;
-  height: 302px;
-  background-image: url("../images/p6_1.png");
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_1.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t2 {
-  width: 101px;
-  height: 126px;
-  background-image: url("../images/p6_2.png");
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_2.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t3 {
-  width: 102px;
-  height: 122px;
-  background-image: url("../images/p6_3.png");
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_3.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t4 {
-  width: 101px;
-  height: 125px;
-  background-image: url("../images/p6_4.png");
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_4.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t5 {
-  width: 97px;
-  height: 123px;
-  background-image: url("../images/p6_5.png");
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_5.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t6 {
-  display: none;
+  width: 623px;
+  height: 699px;
+  background-image: url("../images/p5_6.png");
 }
 .bigContainer .container.channel_6 .p6 .wrap .t7 {
   display: none;
@@ -3760,19 +3762,29 @@ html, body {
   position: relative;
 }
 .bigContainer .container.channel_7 .p7 .wrap .t1 {
-  display: none;
+  width: 332px;
+  height: 302px;
+  background-image: url("../images/p6_1.png");
 }
 .bigContainer .container.channel_7 .p7 .wrap .t2 {
-  display: none;
+  width: 101px;
+  height: 126px;
+  background-image: url("../images/p6_2.png");
 }
 .bigContainer .container.channel_7 .p7 .wrap .t3 {
-  display: none;
+  width: 102px;
+  height: 122px;
+  background-image: url("../images/p6_3.png");
 }
 .bigContainer .container.channel_7 .p7 .wrap .t4 {
-  display: none;
+  width: 101px;
+  height: 125px;
+  background-image: url("../images/p6_4.png");
 }
 .bigContainer .container.channel_7 .p7 .wrap .t5 {
-  display: none;
+  width: 97px;
+  height: 123px;
+  background-image: url("../images/p6_5.png");
 }
 .bigContainer .container.channel_7 .p7 .wrap .t6 {
   display: none;
@@ -4020,7 +4032,7 @@ html, body {
 .bigContainer .container.channel_9 .p9:not(.notAutoLayout) .wrap *:first-child {
   position: relative;
 }
-.bigContainer .container.channel_6 .arr {
+.bigContainer .container.channel_7 .arr {
   display: none;
 }
 
@@ -4123,7 +4135,7 @@ html, body {
 .container .p5 .wrap {
   left: -10px;
 }
-.container .p6 .t1 {
+.container .p7 .t1 {
   position: relative;
   left: 50%;
   -moz-transform: translateX(-50%);
@@ -4131,7 +4143,7 @@ html, body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.container .p6 .btnBox {
+.container .p7 .btnBox {
   position: relative;
   width: 290px;
   left: 50%;
@@ -4141,13 +4153,13 @@ html, body {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.container .p6 .btnBox > * {
+.container .p7 .btnBox > * {
   display: inline-block;
   vertical-align: text-top;
   margin-bottom: 50px;
   cursor: pointer;
 }
-.container .p6 .btnBox > *:nth-child(2n + 1) {
+.container .p7 .btnBox > *:nth-child(2n + 1) {
   margin-right: 80px;
 }
 
